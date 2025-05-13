@@ -20,6 +20,7 @@ p {
 .card {
   position: relative;
   cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .pin {
@@ -53,6 +54,7 @@ p {
   max-height: 70vh;
   border-radius: 10px;
   margin-bottom: 20px;
+  margin-top: 5%;
 }
 
 #close-overlay {
@@ -62,6 +64,13 @@ p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: inline-block;
-  text-align: center;
+}
+
+#btn-position {
+  display: flex;
+  justify-content: center;
+}
+.card:hover {
+  transform: scale(1.05) rotate(10deg);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }

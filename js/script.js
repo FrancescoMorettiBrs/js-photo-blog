@@ -1,15 +1,16 @@
 const userCard = document.getElementById("userCard");
 const apiUrl = "https://lanciweb.github.io/demo/api/pictures/";
+//////////OVERLAY//////////////////
 const overlay = document.getElementById("overlay");
 const overlayImg = document.getElementById("overlay-img");
 const closeBtn = document.getElementById("close-overlay");
 
 axios.get(apiUrl).then(function (resp) {
   const arrayImg = resp.data;
-
+// CICLO FOR PER LE CARD //
   for (let i = 0; i < arrayImg.length; i++) {
     const img = arrayImg[i];
-
+// CREO LE CARD //
     const card = `
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="card h-100 p-4">
