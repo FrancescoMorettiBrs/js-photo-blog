@@ -19,6 +19,7 @@ p {
 
 .card {
   position: relative;
+  cursor: pointer;
 }
 
 .pin {
@@ -30,8 +31,37 @@ p {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay-hidden {
+  display: none;
+}
+
+#overlay-img {
+  max-width: 80%;
+  max-height: 70vh;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#close-overlay {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
 }
